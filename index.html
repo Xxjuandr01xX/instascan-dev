@@ -18,11 +18,14 @@
             alert('Escaneou o conteudo: ' + content);
             window.open(content, "_blank");
         });
-        Instascan.Camera.getCameras().then(cameras => 
+        Instascan.Camera.getCameras().then(cameras =>
+		alert(cameras[0].id);
+		alert(cameras[1].id);
         {
             if(cameras.length > 0){
                 scanner.start(cameras[0]);
 		alert(cameras[0].id);
+		alert(cameras[1].id);
             } else {
                 console.error("Não existe câmera no dispositivo!");
             }
