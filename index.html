@@ -19,9 +19,9 @@
             alert('Escaneou o conteudo: ' + content);
             window.open(content, "_blank");
         });
-	alert(Instascan.Camera.getCameras());
         Instascan.Camera.getCameras().then(cameras =>
         {
+	    alert(cameras.length);
             if(cameras.length > 0){
                 scanner.start(cameras[0]);
             } else {
