@@ -9,12 +9,9 @@
 <body>
 	<video id="preview"></video>
 	<script>
-		let scanner = new Instascan.Scanner(
-            {
-                video  : document.getElementById('preview'),
-		mirror : false
-            }
-        );
+		let scanner = new Instascan.Scanner({
+                    video  : document.getElementById('preview')
+            	});
         scanner.addListener('scan', function(content) {
             alert('Escaneou o conteudo: ' + content);
             window.open(content, "_blank");
